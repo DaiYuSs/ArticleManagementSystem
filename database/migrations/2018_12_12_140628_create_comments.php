@@ -18,8 +18,7 @@ class CreateComments extends Migration
             $table->text('content');
             $table->string('name');
             $table->integer('articles_id');
-            $table->timestamp('create_time');
-
+            $table->dateTime('create_time');
         });
     }
 
