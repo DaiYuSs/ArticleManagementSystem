@@ -25,7 +25,14 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
+
+
+    //自定义用户名,默认使用email字段认证
+    public function username()
+    {
+        return 'email';
+    }
 
     /**
      * Create a new controller instance.
