@@ -24,9 +24,22 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/1.0/articles', 'ArticleController@index');
 //获取带id单个
 Route::get('/1.0/articles/{article}', 'ArticleController@show');
-//提交
+//新增
 Route::post('/1.0/articles', 'ArticleController@store');
 //更新
 Route::put('/1.0/articles/{article}', 'ArticleController@update');
 //删除
 Route::delete('/1.0/articles/{article}', 'ArticleController@delete');
+
+//文章分类
+
+//获取全部
+Route::get('/1.0/articles_class','Articles_classificationController@index');
+//获取带id单个
+Route::get('/1.0/articles_class/{articles_classification}','Articles_classificationController@show');
+//新增
+Route::post('/1.0/articles_class','Articles_classificationController@store');
+//修改(更新)
+Route::put('/1.0/articles_class/{articles_classification}','Articles_classificationController@update');
+//删除
+Route::delete('/1.0/articles_class/{articles_classification}','Articles_classificationController@delete');
