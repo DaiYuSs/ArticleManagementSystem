@@ -30,8 +30,13 @@ class ArticleController extends Controller
     }
 
     //
-    public function update(Request $request, Article $article)
+    public function update(Request $request,$user_id)
     {
+        if ($user_id!=Article::find($request['id'])['author_id']){
+            return response()->json("无权操作",403);
+        }
+        $article=Article::find($request['id']);
+
         $article->update($request->all());
 
         return response()->json("更新成功", 200);

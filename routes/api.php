@@ -42,7 +42,7 @@ Route::get('/1.0/articles_class/{articles_classification}','Articles_classificat
 //新增
 Route::post('/1.0/articles_class','Articles_classificationController@store');
 //修改(更新)
-Route::put('/1.0/articles_class/{articles_classification}','Articles_classificationController@update');
+Route::put('/1.0/articles_class/{user_id}','Articles_classificationController@update');
 //删除
 Route::delete('/1.0/articles_class/{articles_classification}','Articles_classificationController@delete');
 //排序
