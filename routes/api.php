@@ -43,3 +43,11 @@ Route::post('/1.0/articles_class','Articles_classificationController@store');
 Route::put('/1.0/articles_class/{articles_classification}','Articles_classificationController@update');
 //删除
 Route::delete('/1.0/articles_class/{articles_classification}','Articles_classificationController@delete');
+
+//评论
+//获取一个文章的全部评论
+
+//新增
+Route::post('/1.0/comment','CommentController@store');
+//删除
+Route::delete('/1.0/comment','CommentController@delete');
