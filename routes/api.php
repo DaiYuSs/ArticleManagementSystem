@@ -30,6 +30,8 @@ Route::post('/1.0/articles', 'ArticleController@store');
 Route::put('/1.0/articles/{article}', 'ArticleController@update');
 //删除
 Route::delete('/1.0/articles/{article}', 'ArticleController@delete');
+//审核
+Route::get('/1.0/management_articles','ArticleController@show_delete');
 
 //文章分类
 
@@ -43,6 +45,8 @@ Route::post('/1.0/articles_class','Articles_classificationController@store');
 Route::put('/1.0/articles_class/{articles_classification}','Articles_classificationController@update');
 //删除
 Route::delete('/1.0/articles_class/{articles_classification}','Articles_classificationController@delete');
+//排序
+Route::get('/1.0/articles_class/{sort_name}/{title}','Articles_classificationController@class_sort');
 
 //评论
 //获取一个文章的全部评论

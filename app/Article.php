@@ -13,7 +13,7 @@ class Article extends Model
         'content',
         'read_number',
         'classification',
-        'Recycling',
+        'recycling',
         'create_time',
         'modify_time'
     ];

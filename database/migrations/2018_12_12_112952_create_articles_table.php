@@ -20,7 +20,7 @@ class CreateArticlesTable extends Migration
             $table->text('content');
             $table->integer('read_number');
             $table->integer('classification');
-            $table->boolean('Recycling');
+            $table->boolean('recycling');
             $table->dateTime('create_time');
             $table->timestamp('modify_time');
         });
